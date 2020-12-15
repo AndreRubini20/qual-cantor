@@ -1,0 +1,316 @@
+/* ========= GERENCIAMENTO DE TELA ========= */
+
+/*section.titulo{ display: none;}*/
+section.tela1{ display: none;}
+section.tela2{ display: none;}
+section.tela3{ display: none;}
+
+
+/* CARREGAR FONTES */
+@font-face {
+    font-family: abel;
+    src: url('../font/Abel-Regular.ttf');
+}
+@font-face {
+    font-family: 'mticons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/MaterialIcons-Regular.ttf);
+  }
+  
+  .mticons{
+      font-family:mticons;
+  }
+  
+  .faicons{
+      font-family:faicons;
+  }
+
+/* TELA DE INÍCIO */
+
+body {
+    background-color: #87CEFA ;  
+    
+}
+
+section.titulo {
+    text-align: center;
+}
+
+section.titulo h1{
+    font-family: abel;
+    font-size: 4.0em;
+    margin: 7vh 5vw 0 5vw;
+    text-align: center;
+}
+
+section.titulo div.inicio1 p {
+    margin-top: 20px ;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 1.2em;
+}
+
+section.titulo div.inicio1 button {
+    margin-top: 10px;
+    font-size: 1.5em;
+    margin-left: 0px;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+    border: none;
+}
+
+section.titulo div.inicio1 p img {
+    width: 63%;
+    height: 63%;
+}
+
+/* TELA 1 */
+
+section.tela1 {
+    text-align: center;
+}
+
+section.tela1 header{
+    margin-top: -8px;
+    margin-left: 51px;
+    background: #6495ED;                   
+    font-size: 1.3em;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+section.tela1 header p {
+    margin-top: 5px;
+    margin-left: -5px;
+}
+
+section.tela1 header p span.mticons{
+    margin-top: 0px;
+    font-size: 1em;
+    padding: 3px 2px 0 2px;
+    position: relative;
+}
+
+.foot {
+    border: none;
+    background-color: #6495ED;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 60px;
+    height: 640px;
+}
+
+.foot {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.foot p img {
+    margin-top: 70px; 
+    margin-left: 1px;
+    width: 40%;
+    height: 40%;
+}
+
+.tela1 header p {
+    margin-top: -1px;
+}
+
+section.tela1 h1 { 
+    font-size: 1.8em;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-family: abel;
+    margin-left: 50px;
+}
+
+section.tela1 p img.traco {
+    margin-top: 0px;
+    margin-left: 50px; 
+    width: 250px;
+}
+
+section.tela1 h2 img.play {
+    margin-top: 5px;
+    width: 12%;
+    height: 12%;
+    margin-left: 50px; 
+}
+
+section.tela1 div.imagens ul li img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #e3d7cb;
+    margin-left: 20%;
+}
+
+section.tela1 div.imagens ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.tela1 div.imagens ul li {
+    margin-left: 6%;
+    list-style: none;
+    margin-bottom: 5%;
+}
+
+
+/* TELA 2 */
+
+section.tela2 {
+    text-align: center;
+}
+
+section.tela2 header{
+    margin-top: -8px;
+    margin-left: 51px;
+    background: #6495ED;
+    font-size: 1.3em;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+section.tela2 header p {
+    margin-top: 5px;
+    margin-left: -5px;
+}
+
+section.tela2 header p span.mticons{
+    margin-top: 0px;
+    font-size: 1em;
+    padding: 3px 2px 0 2px;
+    position: relative;
+}
+
+.foot {
+    border: none;
+    background-color: #6495ED;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 60px;
+    height: 640px;
+}
+
+.foot {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.foot p img {
+    margin-top: 70px; 
+    margin-left: 1px;
+    width: 40%;
+    height: 40%;
+}
+
+.tela2 header p {
+    margin-top: -1px;
+}
+
+section.tela2 h1 { 
+    font-size: 1.8em;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-family: abel;
+    margin-left: 50px;
+}
+
+section.tela2 p img.traco {
+    margin-top: 0px;
+    margin-left: 50px; 
+    width: 250px;
+}
+
+section.tela2 h2 img.play2 {
+    margin-top: 5px;
+    width: 12%;
+    height: 12%;
+    margin-left: 50px; 
+}
+
+section.tela2 ul li img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #e3d7cb;
+    margin-left: 20%;
+
+}
+
+.imagens ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagens ul li {
+    margin-left: 6%;
+    list-style: none;
+    margin-bottom: 5%;
+}
+
+/* TELA 3 */
+
+section.tela3 {
+    text-align: center;
+    font-family: abel;
+}
+
+section.tela3 h1 {
+    font-size: 1.5em;
+    margin-top: 70px;
+}
+
+section.tela3 p img {
+    text-align: center;
+    width: 20%;
+    height: 20%;
+}
+
+section.tela3 h2 {
+    font-size: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+section.tela3 header p span{
+    border: none;
+    background-color: #6495ED;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    margin-top: -15px;
+}
+
+section.tela3 header p{
+    margin-bottom: 80px;
+    margin-bottom: 50px;
+}
+
+section.tela3 form button {
+    margin-top: -15px;
+    font-size: 1.0em;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+    border: none;
+}
+
+
+

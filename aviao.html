@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="font/material-icons.css"> 
+
+    <title> Qual é o Cantor?/ Qual som é esse? </title>
+</head>
+<body>
+    
+    <section class="titulo">
+        <header>
+            <h1> Qual é o Cantor?</h1> 
+      </header>
+    
+    
+    <div class="inicio1">
+        <p> Este jogo tem como objetivo, <br>
+            testar o seu conhecimento <br>
+            musical. As músicas vão ser <br> 
+            tocadas simultaneamente, e <br>
+            você tem que adivinhar de <br>
+            qual cantor é.
+        </p>
+        <button>Iniciar</button> 
+        <p> <img src="img/pessoa.png"> </p>
+    </div>
+    </section>
+
+    <section class="tela1">
+
+        <header>
+            <p>
+              <span class="mticons">star</span> 
+              ACERTOS: <span class="acertos">0</span>
+            <br>
+            </p>
+            <p>
+              <span class="mticons">alarm</span> 
+              <span class="tempo">00</span>
+            </p>
+          </header>
+      
+
+        <footer class="foot">
+            <p><img src="img/home.png" class="home"> <br><br><br><br><br><br></p>
+            <p><img src="img/volume.png" class="volume"> <br><br><br><br><br><br></p>  <!-- volume_off  -->
+            <p><img src="img/information.png" class="ajuda" data-tela=".tela1"> <br><br><br><br><br><br></p>
+        </footer>
+
+        <h1> Qual é o Cantor? Nível 1</h1>
+        <h2><img src="img/play-arrow.png" class="play"> </h2>
+        <p><img src="img/traço.png" class="traco"> </p>
+
+
+        <div class="imagens">
+            <ul>
+                <li><img class="certo" src="img/Ariana.png"></li>
+                <li><img class="errado dica" src="img/Camilla.png"></li>
+                <li><img class="errado dica" src="img/bebeRexha.png"></li>
+                <li><img class="certo" src="img/duaLipaa.png"></li>
+                <li><img class="errado" src="img/Selena.png"></li>
+                <li><img class="errado" src="img/billie.png"></li>
+            </ul>
+        </div>   
+    </section>
+
+
+    <section class="tela2">
+        <header>
+            <p>
+              <span class="mticons">star</span> 
+              ACERTOS: <span class="acertos">0</span>
+            <br>
+            </p>
+            <p>
+              <span class="mticons">alarm</span> 
+              <span class="tempo">00</span>
+            </p>
+          </header>
+
+        <footer class="foot">
+            <p><img src="img/home.png" class="home2"> <br><br><br><br><br><br></p>
+            <p><img src="img/volume.png" class="volume2"> <br><br><br><br><br><br></p>  <!-- volume_off  -->
+            <p><img src="img/information.png" class="ajuda" data-tela=".tela2"> <br><br><br><br><br><br></p>
+        </footer>
+
+        <h1> Qual é o Cantor? Nível 2</h1>
+        <h2><img src="img/play-arrow.png" class="play2"> </h2>
+        <p><img src="img/traço.png" class="traco"> </p>
+
+        <div class="imagens">
+            <ul>
+                <li><img class="certo" src="img/Ariana.png"></li>
+                <li><img class="errado dica" src="img/Camilla.png"></li>
+                <li><img class="errado dica" src="img/bebeRexha.png"></li>
+                <li><img class="certo" src="img/duaLipaa.png"></li>
+                <li><img class="certo" src="img/Selena.png"></li>
+                <li><img class="errado" src="img/billie.png"></li>
+            </ul>
+        </div>   
+
+    </section>
+
+    <section class="tela3">
+        <h1> PARABÉNS VOCÊ CONSEGUIU CONCLUIR O JOGO!!! </h1>
+        <p><img src="img/trofeu.jpg"></p>
+
+        <h2><strong>Confira seu desempenho no jogo: </strong></h2>
+         <header class="resultado">
+             <p>
+                <span class="nome"> ACERTOS: </span> 
+               <span class="acertos"> </span>
+             </p>
+             <p>
+                <span class="nomee"> TEMPO: </span> 
+               <span id="tempofinal"> </span>
+               
+             </p>
+             <p>
+              <span class="erros"> ERROS: </span> 
+              <span id="errado"> </span>
+              </p>
+             <form>
+             <button><strong> HOME </strong></button>
+             </form>
+         </header>
+
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    let musica1, musica2, musica3 = new Audio("");
+    let cont = 0;
+
+    var time;
+    let vrfmsc=0;
+
+    /* TELA 1 */
+
+    $("section.titulo div.inicio1 button").on("click",function(){ 
+    // Transição de Tela //
+    $("section").hide();
+    $("section.tela1").show();
+
+	if (vrfmsc==0) {
+		setInterval(function(){
+  			var tempo = parseInt($('span.tempo').text());
+  			soma = tempo + 1;
+  			if (soma < 10) {
+  				soma = "0"+soma;
+  			};
+  			$('span.tempo').text(soma + "s");
+  		},1000);
+	}   else {
+		$('span.tempo').text(0 + "s");
+	}
+    
+
+  	});
+
+    $("section.tela1 footer p img.home").on("click",function(){
+    if (vrf==1) {
+    	musica1.pause();
+        musica2.pause();
+        musica3.pause();
+    }
+    $("section").hide();
+    $("section.titulo").show();
+    vrfmsc++;
+    });
+
+    
+    var som = 0;
+    $("section.tela1 footer p img.volume").on("click",function(){ 
+        som += 1;
+
+        if(som % 2 == 0) {
+           musica1.volume = 1.0;
+           musica2.volume = 1.0;
+        }else {
+            musica1.volume = 0.0;
+            musica2.volume = 0.0;
+        }
+     });
+    
+     $("section footer p img.ajuda").on("click",function(){  
+         let alvo = $(this).data("tela");
+         console.log(alvo); 
+         $(alvo+" .dica").css({opacity : 0.1});
+
+    }); 
+
+     var vlm = 0;
+     var vrf=0;
+  	$("section.tela1 h2 img.play").on("click", function(){
+  		if (vlm == 0) {
+  			musica1 = new Audio("Musicas/Cantores/break.mp3");
+  			musica1.play();
+  			musica2 = new Audio("Musicas/Cantores/duaLipaa.mp3");
+  			musica2.play();
+  			vlm++;
+  		} else if (vlm == 1) {
+  			musica1.pause();
+  			musica2.pause();
+  			vlm--;
+  		}
+  		vrf++;
+      });
+
+        function trocarTela(novaTela){
+            if (vrf==1) {
+            	musica1.pause();
+            	musica2.pause();
+            	musica3.pause();
+            }
+            $("section").hide();
+            $("section.tela"+novaTela).show();
+            time = parseInt($('span.tempo').text());	
+  			$('#tempofinal').text(time+'s');
+        
+        }
+    
+    var erros = 0;
+  	$("img.errado").one("click", function(){
+
+  		$(this).css({opacity : 0.5});
+          cont++;
+  		if (cont==2) {
+  			trocarTela(2);
+
+  		} else if (cont ==5) {
+            trocarTela(3);
+            musica4 = new Audio("Musicas/win.wav");
+            musica4.play();
+            
+          }
+
+          erros += 1;
+          $('#errado').text(erros);
+      });
+
+  	$("img.certo").one("click", function(){
+  		$(this).css({opacity : 0.5});
+  			var certo = parseInt($('span.acertos').eq(0).text());
+  			soma = certo + 1;
+  			$('span.acertos').text(soma);
+
+          cont++;
+          if (cont==2) {
+  			trocarTela(2);
+  		} else if (cont ==5) {
+            trocarTela(3);
+            musica4 =new Audio("Musicas/win.wav");
+            musica4.play(); 
+          }  	
+      });
+
+      /* TELA 2 */
+
+
+    $("section.tela2 footer p img.home2").on("click",function(){
+      	musica1.pause();
+        musica2.pause();
+        musica3.pause();
+  
+      $("section").hide();
+    $("section.titulo").show();
+    });
+
+    var som = 0;
+    $("section.tela2 footer p img.volume2").on("click",function(){ 
+        som += 1;
+
+        if(som % 2 == 0) {
+           musica1.volume = 1.0;
+           musica2.volume = 1.0;
+           musica3.volume = 1.0;
+      
+        }else {
+            musica1.volume = 0.0;
+            musica2.volume = 0.0;
+            musica3.volume = 0.0;
+        }
+     });
+
+      var vlmm = 0; 
+  	$("section.tela2 h2 img.play2").on("click", function(){
+  		if (vlmm == 0) {
+  			musica1 = new Audio("Musicas/Cantores/break.mp3");
+  			musica1.play();
+  			musica2 = new Audio("Musicas/Cantores/duaLipaa.mp3");
+  			musica2.play();
+            musica3 = new Audio("Musicas/Cantores/wolves.mp3");
+  			musica3.play();
+  			vlmm++;
+  		} else if (vlmm == 1) {
+  			musica1.pause();
+  			musica2.pause();
+            musica3.pause();
+  			vlmm--;
+  		}
+      });
+
+      /* TELA 3*/ 
+
+
+      
+    
+  		
+
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
